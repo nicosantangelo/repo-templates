@@ -1,0 +1,28 @@
+{
+  /* More info at: https://www.typescriptlang.org/tsconfig */
+  "compilerOptions": {
+    "target": "ES2020" /* Specify ECMAScript target version: 'ES3' (default). We use a somewhat modern ES2020 targeting most browsers today. */,
+    "useDefineForClassFields": true /* Consistency between ECMA versions */,
+    "lib": [
+      "ES2020",
+      "DOM"
+    ] /* Set of type definitions for built-in JS APIs, as well as type definitions for things found in browser environments. If running in a browser should have DOM values: ["ES2020", "DOM", "DOM.Iterable"], */,
+    "module": "NodeNext" /* Module code generation. We'll use `ESNext` for bundled code and `NodeNext` for NodeJS code. Check the "moduleResultion" property */,
+    "skipLibCheck": true /* Only check types explicitely required from the code. If a lib redefines a type the project does not see, skip it. */,
+    "esModuleInterop": true,
+
+    /* Bundler mode */
+    "moduleResolution": "NodeNext" /* Module resolution strategy. We'll use `bundler` for bundled code and `node16` for NodeJS code. Check the "module" property. */,
+    "resolveJsonModule": true /* Import json files */,
+    "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. Avoids problems with single-file transpilers. */,
+    "jsx": "react-jsx" /* Only set if the code is using JSX, it'll only affect `.tsx` files. It'll compile React calls to `_jsx()` from the `react/jsx-runtime` lib. */,
+    "allowImportingTsExtensions": false /* Allows TypeScript files to import each other with a TypeScript-specific extension. Only available when `noEmit` is true, expecting the bundler to resolve potential issues. Used with other bundlers like ViteJS. */,
+    "noEmit": false /* Do not emit compiler output files like JavaScript source code, source-maps or declarations. Used in conjunction with other bundlers like ViteJS */,
+
+    /* Linting */
+    "strict": true /* Enable all strict type checking options. */,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}
