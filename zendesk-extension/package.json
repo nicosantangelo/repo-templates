@@ -1,11 +1,13 @@
 {
-  "name": "website-template",
+  "name": "zendesk-extension",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "serve": "npx @zendesk/zcli apps:server ./dist",
+    "build-zendesk-index": "sed -e 's@/assets/@./@g' dist/index.html > dist/assets/index.html && rm dist/index.html",
+    "build": "tsc && vite build && npm run build-zendesk-index",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest --jsdom"
@@ -20,6 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "@zendesk/zcli": "^1.0.0-beta.42",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
