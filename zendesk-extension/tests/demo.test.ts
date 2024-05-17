@@ -1,5 +1,7 @@
-import { expect, test } from "vitest";
+import { describe, it, expect } from "vitest";
 
-test("adds 1 + 2 to equal 3", () => {
-  expect(1 + 2).toBe(3);
+describe("sum", () => {
+  it("adds and returns the sum of two numbers", () => {
+    expect(-1 + 3).toBe(2);
+  });
 });
